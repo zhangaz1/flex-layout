@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>container-pain</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+</body>
+<div class="layout-col">
+    <div class="container-pane" style="background-color: green;">
+        <button class="pinPane">Pin</button>container-pane
+        <button class="floatPane">Float</button>
+    </div>
+    <div class="container-body" style="background-color: yellow;">
+        <p>body start</p>
+        <p style="text-align:right;">body end</p>
+    </div>
+    <div class="container-pane" style="background-color: green;">
+        <button class="pinPane">Pin</button>container-pane
+        <button class="floatPaneRight">Float</button>
+    </div>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+$('.floatPane').click(function() {
+    $(this).parent().addClass('pane-float-left');
+
+});
+
+$('.floatPaneRight').click(function() {
+    $(this).parent().addClass('pane-float-right');
+
+});
+
+$('.pinPane').click(function() {
+    $(this).parent().removeClass('pane-float-left pane-float-right');
+
+});
+</script>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main UI</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+    /* only for demo */
+    
+    .nb-map-search {
+        height: auto;
+        z-index: 800;
+    }
+    
+    .nb-map-search-result {
+        display: none;
+    }
+    
+    .nb-map-bottom-right-wrap {
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+    }
+    
+    .dragBar {
+        display: block;
+        height: 80px;
+        background-color: red;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -40px;
+        cursor: col-resize;
+    }
+    
+    .topology {
+        position: absolute;
+        z-index: 900;
+        width: 200px;
+        right: -220px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout-row" style="background-color: red;">
+        <div class="container-header" style="background-color: blue; color:#fff">
+            <h1>container-header
+            <button class="addHeight">+ height</button>
+            <button class="subHeight">- height</button>
+            </h1>
+        </div>
+        <div class="container-body" style="background-color: green;">
+            <div class="layout-col" style="background-color: yellow;">
+                <div class="container-pane" style="background-color: olive;">
+                    <div>container-pane</div>
+                </div>
+                <div class="container-body" style="background-color: green;">
+                    <div class="layout-col" style="background-color: yellow;">
+                        <div class="container-pane" style="background-color: pink;">
+                            container-pane
+                            <br/>
+                            <button class="addWidth">+ width</button>
+                            <button class="subWidth">- width</button>
+                            <br/>
+                            <button class="pinPane">Pin</button>
+                            <button class="floatPane">Float</button>
+                            <span class="dragBar">Drag</span>
+                        </div>
+                        <div class="container-body" style="background-color: green;">
+                            <div class="layout-row" style="background-color: red;">
+                                <div class="container-header" style="background-color: red; color:#fff">
+                                    <h2>
+                                    container-header
+                                    <button class="addHeight">+ height</button>
+                                    <button class="subHeight">- height</button>
+                                    </h2>
+                                </div>
+                                <div class="container-body" style="background-color: yellow;">
+                                    <div class="layout-col" style="background-color: purple;">
+                                        <div class="container-pane pane-float-left nb-map-search" style="background-color: olive;">
+                                            <input type="text" value="" />
+                                            <button id="searchMap">search</button>
+                                            <button class="topology">Topology Default View</button>
+                                            <br/>
+                                            <button class="addWidth">+ width</button>
+                                            <button class="subWidth">- width</button>
+                                            <button id="close">close</button>
+                                            <div class="nb-map-search-result">
+                                                <p>search result</p>
+                                                <p>search result</p>
+                                                <p>search result</p>
+                                                <p>search result</p>
+                                                <p>search result</p>
+                                                <p>search result</p>
+                                                <p>search result</p>
+                                                <p>search result</p>
+                                            </div>
+                                        </div>
+                                        <div class="container-body" style="background-color: green;">
+                                            <div class="layout-row" style="background-color: yellow;">
+                                                <div class="container-header" style="background-color: goldenrod; color:#fff">
+                                                    <div style="float:right; background-color:olive;width:60%;height:48px;">
+                                                        <button>Action 1</button>&nbsp;
+                                                        <button>Action 2</button>&nbsp;
+                                                        <button>Action 3</button>&nbsp;
+                                                        <button>Action 4</button>&nbsp;
+                                                        <button>Action 5</button>&nbsp;
+                                                        <button>Action 6</button>&nbsp;
+                                                        <button>Action 7</button>&nbsp;
+                                                        <button>Action 8</button>&nbsp;
+                                                        <button>Action 9</button>&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="container-body" style="background-color: blue;">
+                                                    <div class="layout-col" style="background-color: purple;">
+                                                        <div class="container-body" style="background-color: blue; color:#fff;">
+                                                            <div>container-body</div>
+                                                            <div class="nb-map-bottom-right-wrap" style="background-color: orange;">
+                                                                <button>Action 1</button>&nbsp;
+                                                                <button>Action 2</button>&nbsp;
+                                                                <button>Action 3</button>&nbsp;
+                                                            </div>
+                                                        </div>
+                                                        <div class="container-pane" style="background-color: pink;">container-pane&nbsp;
+                                                            <button class="pinPane">Pin</button>&nbsp;
+                                                            <button class="floatPaneRight">Float</button>&nbsp;
+                                                            <button class="hide">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

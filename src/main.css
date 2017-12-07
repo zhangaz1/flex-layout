@@ -1,0 +1,63 @@
+body,
+p {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+html,
+body {
+    /*set body's size equal to browser's viewport*/
+    height: 100%;
+}
+
+.layout-row,
+.layout-col {
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.layout-row {
+    flex-direction: column;
+}
+
+.layout-col {
+    flex-direction: row;
+}
+
+.container-header {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.container-body {
+    position: relative;
+    /*Set height to a value can make child get correct height*/
+    height: 1px;
+    flex: 1 1 auto;
+}
+
+.layout-col > .container-body {
+    height: 100%;
+}
+
+.container-pane {
+    position: relative;
+    height: 100%;
+    flex: 0 0 auto;
+}
+
+.pane-float-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+.pane-float-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 900;
+}

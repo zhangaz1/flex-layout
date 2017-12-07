@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>container-body</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+</body>
+<div class="layout-row">
+    <div class="container-body" style="background-color: green;">one</div>
+    <!-- container-body与layout-col分为两层的写法-->
+    <div class="container-body">
+        <div class="layout-col">
+            <div class="container-body" style="background-color: pink;">
+                two
+            </div>
+            <div class="container-body" style="background-color: purple;">
+                three
+            </div>
+        </div>
+    </div>
+    <div class="container-body" style="background-color: yellow;">four</div>
+</div>
+<div class="layout-row">
+    <div class="container-body" style="background-color: green;">one</div>
+    <!-- container-body与layout-col合为一层的写法-->
+    <div class="container-body layout-col">
+        <div class="container-body" style="background-color: pink;">
+            two
+        </div>
+        <div class="container-body" style="background-color: purple;">
+            three
+        </div>
+    </div>
+    <div class="container-body" style="background-color: yellow;">four</div>
+</div>
+</html>
